@@ -1,7 +1,7 @@
 class dspam::params {
 
-  $package_name='dspam'
-  $service_name='dspam'
+  $package_name = [ 'dspam-client', 'dspam' ]
+  $service_name = 'dspam'
 
   case $::osfamily
   {
