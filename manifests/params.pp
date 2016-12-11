@@ -11,6 +11,7 @@ class dspam::params {
       {
         /^[5-7].*$/:
         {
+          $include_epel=true
         }
         default: { fail("Unsupported RHEL/CentOS version! - ${::operatingsystemrelease}")  }
       }
@@ -25,6 +26,7 @@ class dspam::params {
           {
             /^14.*$/:
             {
+              $include_epel=true
             }
             default: { fail("Unsupported Ubuntu version! - ${::operatingsystemrelease}")  }
           }
