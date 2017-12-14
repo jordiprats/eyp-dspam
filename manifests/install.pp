@@ -2,9 +2,9 @@ class dspam::install inherits dspam {
 
   if($dspam::manage_package)
   {
-    if($include_epel)
+    if($dspam::params::include_epel)
     {
-      ::include epel
+      include ::epel
 
       Package[$dspam::params::package_name] {
         require => Class['::epel'],
